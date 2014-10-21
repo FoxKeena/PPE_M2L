@@ -79,16 +79,16 @@
 			}
 
 			$reponse = $bdd->query('SELECT * FROM users WHERE id="'.$this->getId().'"'); //On récupère un utilisateur grâce à son id
-			foreach($reponse as $recup):
+			foreach($reponse as $recup):	//On parcours le tableau récupéré avec la requête
 			
-				$id = $recup['id'];
-				$nom = $recup['nom'];
-				$prenom = $recup['prenom'];
-				$ddn = $recup['ddn'];
-				$email = $recup['email'];
-				$tel = $recup['tel'];
+				$id = $recup['id'];			//On attribue la valeur de la colonne d'id de la bdd à la variable $id
+				$nom = $recup['nom'];		//On attribue la valeur de la colonne de nom de la bdd à la variable $nom
+				$prenom = $recup['prenom'];	//On attribue la valeur de la colonne de prenom de la bdd à la variable $prenom
+				$ddn = $recup['ddn'];		//On attribue la valeur de la colonne de ddn de la bdd à la variable $ddn
+				$email = $recup['email'];	//On attribue la valeur de la colonne d'email de la bdd à la variable $email
+				$tel = $recup['tel'];		//On attribue la valeur de la colonne de tel de la bdd à la variable $tel
 			
-				?>
+				?>	<!-- On quitte le php pour lancer le formulaire html où les value serons préremplies par les valeurs récupérées dans la bdd -->
 					<form action='changeUser.class.php' method='POST'>
 					<input type='hidden' name='id' value='<?= $id ?>'>
 					Nom : <input type='text' name='nom' value='<?= $nom; ?>'><br/><br/>
@@ -99,9 +99,9 @@
 					<input type='submit' value='submit' name='submit'>
 					</form>
 
-				<?php
+				<?php //On relance le php
 
-				endforeach;
+				endforeach; //On termine le foreach
 		}
 
 

@@ -12,8 +12,7 @@
 		$user->setTel($_POST['tel']);
 
 
-		$user->changeUser();
-		var_dump($user);
+		$user->changeUser(); // On lance la fonction pour modifier un utilisateur
 		echo "<meta charset='UTF-8'>Donnée enregistrée avec succès !";
 
 	}
