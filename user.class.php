@@ -46,7 +46,7 @@
 		{
 			try
 			{
-				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', ''); //On essaye de se connecter à la bdd
+				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', 'bris4usa'); //On essaye de se connecter à la bdd
 			}
 			catch (Exception $e)
 			{
@@ -63,17 +63,71 @@
 		}
 
 
+		//FONCTION DE RECUPERATIONS D'INFORMATION D'UTILISATEUR
+
+		public function takeUser($value) //$value correspond à l'id de l'utilisateur
+		{
+			$this->_id = $value;
+
+			try
+			{
+				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', 'bris4usa'); //On essaye de se connecter à la bdd
+			}
+			catch (Exception $e)
+			{
+		        die('Erreur : ' . $e->getMessage()); // Si la connection ne passe pas, on renvoie un message d'erreur et tout s'arrête
+			}
+
+			$reponse = $bdd->query('SELECT * FROM users WHERE id="'.$this->getId().'"'); //On récupère un utilisateur grâce à son id
+			foreach($reponse as $recup):
+			
+				$id = $recup['id'];
+				$nom = $recup['nom'];
+				$prenom = $recup['prenom'];
+				$ddn = $recup['ddn'];
+				$email = $recup['email'];
+				$tel = $recup['tel'];
+			
+				?>
+					<form action='changeUser.class.php' method='POST'>
+					<input type='hidden' name='id' value='<?= $id ?>'>
+					Nom : <input type='text' name='nom' value='<?= $nom; ?>'><br/><br/>
+					Prenom : <input type='text' name='prenom' value='<?= $prenom ?>'><br/><br/>
+					Ddn : <input type='text' name='ddn' value='<?= $ddn ?>'><br/><br/>
+					Email : <input type='text' name='email' value='<?= $email ?>'><br/><br/>
+					Tel : <input type='text' name='tel' value='<?= $tel ?>'><br/><br/>
+					<input type='submit' value='submit' name='submit'>
+					</form>
+
+				<?php
+
+				endforeach;
+		}
 
 
 		//FONCTION DE MODIFICATION D'UTILISATUER DANS LA BDD :
 
 		public function changeUser()
 		{
+			try
+			{
+				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', 'bris4usa'); //On essaye de se connecter à la bdd
+			}
+			catch (Exception $e)
+			{
+		        die('Erreur : ' . $e->getMessage()); // Si la connection ne passe pas, on renvoie un message d'erreur et tout s'arrête
+			}
 
+			$reponse = $bdd->query('REPLACE INTO users (id, nom, prenom, ddn, email, tel) 
+			VALUES 	("'.$this->getId().'", 
+					 "'.$this->getNom().'",
+					 "'.$this->getPrenom().'",
+					 "'.$this->getDdn().'",
+					 "'.$this->getEmail().'", 
+					 "'.$this->getTel().'")'); // On envoie la requête, on remplace les données dans la base si l'id existe, sinon il crée une nouvelle ligne
+			
 		}
 
 	}
-
-
 
 ?>
