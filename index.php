@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="./bootstrap/favicon.ico">
-
+    <link rel="stylesheet" type="text/css" href="bootstrap\css\slider.css">
     <title>Jumbotron Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -56,17 +56,54 @@
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
-        </div><!--/.navbar-collapse -->
+        <!--</div><!--/.navbar-collapse 
+        	<div class="container">
+        		<ul class="nav nav-dropdown-2nd-col navbar-right">
+        			<li><a href="#" class="carret">Se connecter</a></li>
+        			<ul class="carret"></ul>
+        				<li><a href="#">S'inscrire</a></li>
+        				<li><a href="#">Test</a></li>
+        				<li><a href="#">Blabla</a></li>
+        		</ul>
+        	</div>-->
     </div>
 </div>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello, world!</h1>
+        <!--<h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-    </div>
+    	</div>-->	
+
+    	<div id="diaporama">	
+		    <div id="diaposlider">
+			    <div class="diapo">
+			    	<img src="cheval.jpg" alt="Equitation" data-description="Venez apprendre à monter un étalon">
+			    </div>
+			    <div class="diapo">
+			    	<img src="footbal.jpg" alt="Football" data-large-src="Le Foot est aussi bien pour les hommes,...">
+			    </div>
+			    <div class="diapo">
+			    	<img src="foot.jpg" alt="Football" data-large-src="Que pour les Femmes !">
+			    </div>
+			    <div class="diapo">
+			    	<img src="piscine.jpg" alt="Natation" data-large-src="Venez apprendre à nager">
+			    </div>
+			    <div class="diapo">
+			    	<img src="apnee.jpg" alt="Apnée" data-large-src="Et restez sous l'eau le plus longtemps possible">
+			    </div>
+			    <div class="diapo">
+			    	<img src="patinage.jpg" alt="Patinage" data-large-src="Apprennez à faire confiance à vôtre partenaire">
+			    </div>
+			    <div class="diapo">
+			    	<img src="tennis.jpg" alt="Tennis" data-large-src="Ou affronter le sur terre battue">
+			    </div>
+			</div>
+		</div>
+    
+    	
 </div>
 
 <div class="container">
@@ -100,9 +137,13 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../../dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="app-jquery.js"></script>
 </body>
 </html>
