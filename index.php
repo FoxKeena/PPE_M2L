@@ -50,7 +50,7 @@
 	        <input type="submit" value="Envoyer"/>
 	    </form>
 	</body>
-</html>
+
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
