@@ -19,49 +19,51 @@
     <link rel="icon" href="./bootstrap/favicon.ico">
     <link rel="stylesheet" type="text/css" href="bootstrap\css\slider.css">
     <title>Jumbotron Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./bootstrap/jumbotron.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<link href="./bootstrap/jumbotron.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slider.css">
 </head>
+	<body>
 
-<body>
-
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Maison des Ligues Lorraines</a>
-		<form method="post" action="module_recherche.php">
-	        <input type="text" name="recherche"/>
-	        <input type="submit" value="Envoyer"/>
-	    </form>
-	</body>
-
-        </div>
-        <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" role="form">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		    <div class="container">
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" href="header.php">Maison des Ligues Lorraines</a>
+		            <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form" class="navbar-form navbar-left">
+		            	<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+					    Recherche
+					    	<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					    	<strong>Vous recherchez : </strong><input type='text' class="form-control" name="search"/>
+							<button type="submit" class="btn btn-success">Rechercher</button>
+						</ul>
+						</div>
+					</form>
+		        </div>
+		           <!--<div class="navbar-form navbar-rigth">
+				    	<a href="adduser.php">S'inscrire</a>
+				    </div>-->
+		        <div class="navbar-collapse collapse">
+		            <form class="navbar-form navbar-right" role="form">
+		                <div class="form-group">
+		                    <input type="text" placeholder="Email" class="form-control">
+		                </div>
+		                <div class="form-group">
+		                    <input type="password" placeholder="Password" class="form-control">
+		                </div>
+		                <button type="submit" class="btn btn-success">Sign in</button>
+		            </form>
+		            </div>
+		    </div>
+		</div>
         <!--</div><!--/.navbar-collapse 
         	<div class="container">
         		<ul class="nav nav-dropdown-2nd-col navbar-right">
@@ -82,35 +84,36 @@
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     	</div>-->	
-<div class="main">
-    	<div id="diaporama">	
-		    <div id="diaposlider">
-			    <div class="diapo">
-			    	<img src="cheval.jpg" alt="Equitation" data-description="Venez apprendre à monter un étalon">
-			    </div>
-			    <div class="diapo">
-			    	<img src="footbal.jpg" alt="Football" data-large-src="Le Foot est aussi bien pour les hommes,...">
-			    </div>
-			    <div class="diapo">
-			    	<img src="foot.jpg" alt="Football" data-large-src="Que pour les Femmes !">
-			    </div>
-			    <div class="diapo">
-			    	<img src="piscine.jpg" alt="Natation" data-large-src="Venez apprendre à nager">
-			    </div>
-			    <div class="diapo">
-			    	<img src="apnee.jpg" alt="Apnée" data-large-src="Et restez sous l'eau le plus longtemps possible">
-			    </div>
-			    <div class="diapo">
-			    	<img src="patinage.jpg" alt="Patinage" data-large-src="Apprennez à faire confiance à vôtre partenaire">
-			    </div>
-			    <div class="diapo">
-			    	<img src="tennis.jpg" alt="Tennis" data-large-src="Ou affronter le sur terre battue">
-			    </div>
+		<div class="main">
+		    	<div id="diaporama">	
+				    <div id="diaposlider">
+					    <div class="diapo">
+					    	<img src="cheval.jpg" alt="Equitation" data-description="Venez apprendre à monter un étalon">
+					    </div>
+					    <div class="diapo">
+					    	<img src="footbal.jpg" alt="Football" data-large-src="Le Foot est aussi bien pour les hommes,...">
+					    </div>
+					    <div class="diapo">
+					    	<img src="foot.jpg" alt="Football" data-large-src="Que pour les Femmes !">
+					    </div>
+					    <div class="diapo">
+					    	<img src="piscine.jpg" alt="Natation" data-large-src="Venez apprendre à nager">
+					    </div>
+					    <div class="diapo">
+					    	<img src="apnee.jpg" alt="Apnée" data-large-src="Et restez sous l'eau le plus longtemps possible">
+					    </div>
+					    <div class="diapo">
+					    	<img src="patinage.jpg" alt="Patinage" data-large-src="Apprennez à faire confiance à vôtre partenaire">
+					    </div>
+					    <div class="diapo">
+					    	<img src="tennis.jpg" alt="Tennis" data-large-src="Ou affronter le sur terre battue">
+					    </div>
+					</div>
+				</div>
 			</div>
-		</div>
-		</div>
-	</div>    
-    	
+		</div>    
+		    	
+	</div>
 </div>
 
 <div class="container">
@@ -131,13 +134,14 @@
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
+        <footer>
+        <p>&copy; Maison des ligues de Lorraine 2015</p>
+    </footer>
     </div>
 
     <hr>
 
-    <footer>
-        <p>&copy; Company 2014</p>
-    </footer>
+    
 </div> <!-- /container -->
 
 

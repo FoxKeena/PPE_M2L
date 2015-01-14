@@ -10,6 +10,7 @@
 	width: 900px;
 	overflow: hidden;
 	display: inline-block;
+	margin-top: 5%;
 }
 
 #diaposlider{
@@ -39,4 +40,19 @@
 
 #tableau{
 	margin-top: 50px;
+}
+
+#register{
+	margin-left: 40%;
+	margin-top: 5%;
+	margin-right: 50%;
+}
+
+#ddn{
+	margin-right: 55%;
+}
+
+#rechercher{
+	margin-top: 10%;
+	margin-left: 35%;
 }

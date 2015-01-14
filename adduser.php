@@ -1,3 +1,7 @@
+<?php
+include("header.php")
+?>
+
 <html>
 	<head>
 
@@ -9,19 +13,19 @@
 	<body>
 
 		<h1>Ajout d'utilisateur</h1>
+		<div id="register" class="">
+			<form action='adduser.class.php' method='post'>
 
-		<form action='adduser.class.php' method='post'>
+				<strong>Nom : </strong><input type='text' name='nom' class="form-control"/><br/><br/>
+				<strong>Prenom : </strong><input type='text' name='prenom' class="form-control"/><br/><br/>
+				<strong>Date de naissance : </strong><input type='date' name='ddn' class="form-control" id="ddn"/><br/><br/>
+				<strong>Email : </strong><input type='email' name='email' class="form-control"/><br/><br/>
+				<strong>Tel : </strong><input type='tel' name='tel' class="form-control"/><br/><br/>
 
-			Nom : <input type='text' name='nom'><br/><br/>
-			Prenom : <input type='text' name='prenom'><br/><br/>
-			Ddn : <input type='text' name='ddn'><br/><br/>
-			Email : <input type='text' name='email'><br/><br/>
-			Tel : <input type='text' name='tel'><br/><br/>
-
-			<input type='submit' value='submit' name='submit'>
+				<button type="submit" class="btn btn-success" value="Envoyer">
 
 
-		</form>
-
+			</form>
+		</div>
 	</body>
 </html>
