@@ -24,7 +24,7 @@
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
-		            <a class="navbar-brand" href="index.php">Maison des Ligues Lorraines</a>
+		            <a class="navbar-brand" href="Docs/index.php">Maison des Ligues Lorraines</a>
 		            <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form" class="navbar-form navbar-left">
 		            	<div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">

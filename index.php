@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: Keena
- * Date: 29/10/14
- * Time: 17:15
+ * Date: 28/01/15
+ * Time: 14:39
  */
+
 ?>
 
 
@@ -16,145 +17,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./bootstrap/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="bootstrap\css\slider.css">
-    <title>Jumbotron Template for Bootstrap</title>
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./bootstrap/jumbotron.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="slider.css">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="carousel.css" rel="stylesheet">
+    <link href="dropdown.css" rel="stylesheet">
 </head>
-	<body>
-
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		    <div class="container">
-		        <div class="navbar-header">
-		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		            </button>
-		            <a class="navbar-brand" href="header.php">Maison des Ligues Lorraines</a>
-		            <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form" class="navbar-form navbar-left">
-		            	<div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-					    Recherche
-					    	<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					    	<strong>Vous recherchez : </strong><input type='text' class="form-control" name="search"/>
-							<button type="submit" class="btn btn-success">Rechercher</button>
-						</ul>
-						</div>
-					</form>
-		        </div>
-		           <!--<div class="navbar-form navbar-rigth">
-				    	<a href="adduser.php">S'inscrire</a>
-				    </div>-->
-		        <div class="navbar-collapse collapse">
-		            <form class="navbar-form navbar-right" role="form">
-		                <div class="form-group">
-		                    <input type="text" placeholder="Email" class="form-control">
-		                </div>
-		                <div class="form-group">
-		                    <input type="password" placeholder="Password" class="form-control">
-		                </div>
-		                <button type="submit" class="btn btn-success">Sign in</button>
-		            </form>
-		            </div>
-		    </div>
-		</div>
-        <!--</div><!--/.navbar-collapse 
-        	<div class="container">
-        		<ul class="nav nav-dropdown-2nd-col navbar-right">
-        			<li><a href="#" class="carret">Se connecter</a></li>
-        			<ul class="carret"></ul>
-        				<li><a href="#">S'inscrire</a></li>
-        				<li><a href="#">Test</a></li>
-        				<li><a href="#">Blabla</a></li>
-        		</ul>
-        	</div>-->
-    </div>
-</div>
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
     <div class="container">
-        <!--<h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-    	</div>-->	
-		<div class="main">
-		    	<div id="diaporama">	
-				    <div id="diaposlider">
-					    <div class="diapo">
-					    	<img src="cheval.jpg" alt="Equitation" data-description="Venez apprendre à monter un étalon">
-					    </div>
-					    <div class="diapo">
-					    	<img src="footbal.jpg" alt="Football" data-large-src="Le Foot est aussi bien pour les hommes,...">
-					    </div>
-					    <div class="diapo">
-					    	<img src="foot.jpg" alt="Football" data-large-src="Que pour les Femmes !">
-					    </div>
-					    <div class="diapo">
-					    	<img src="piscine.jpg" alt="Natation" data-large-src="Venez apprendre à nager">
-					    </div>
-					    <div class="diapo">
-					    	<img src="apnee.jpg" alt="Apnée" data-large-src="Et restez sous l'eau le plus longtemps possible">
-					    </div>
-					    <div class="diapo">
-					    	<img src="patinage.jpg" alt="Patinage" data-large-src="Apprennez à faire confiance à vôtre partenaire">
-					    </div>
-					    <div class="diapo">
-					    	<img src="tennis.jpg" alt="Tennis" data-large-src="Ou affronter le sur terre battue">
-					    </div>
-					</div>
-				</div>
-			</div>
-		</div>    
-		    	
-	</div>
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">M2L</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="indexv2.php">Index</a></li>
+                            <li class="dropdown">
+                                <a id="ligues" data-toggle="dropdown" role="button" data-target="#">Ligues <span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Sports</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="http://www.aikidoenlorraine.com">Aikido</a> </li>
+                                            <li><a href="">Athléthisme</a> </li>
+                                            <li><a href="">Aviron</a> </li>
+                                            <li><a href="">Badmington</a></li>
+                                            <li><a href="">Baseball</a></li>
+                                            <li><a href="">BasketBall</a></li>
+                                            <li><a href="">Bowling</a></li>
+                                            <li><a href="">Boxe Anglaise</a></li>
+                                            <li><a href="">Canoë Kayak</a></li>
+                                            <li><a href="">Danse</a></li>
+                                            <li><a href="">Echecs</a></li>
+                                            <li><a href="">Escalade</a></li>
+                                            <li><a href="">Escrime</a></li>
+                                            <li><a href="">Golf</a></li>
+                                            <li><a href="">Gymnastique</a></li>
+                                            <li><a href="">Handball</a></li>
+                                            <li><a href="">Judo</a></li>
+                                            <li><a href="">Karaté</a></li>
+                                            <li><a href="">Natation</a></li>
+                                            <li><a href="">Rugby</a></li>
+                                            <li><a href="#">Tennis</a></li>
+                                            <li><a href="#">VolleyBall</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-2" href="#">Salles</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">1</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        <li><a href="#">Contact</a> </li>
+                    </ul>
+                    <div class="navbar-collapse navbar-right">
+                        <form class="navbar-form navbar-right" role="form">
+                           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_connection">Se connecter</button>
+                        </form>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a id="recherche" data-toggle="dropdown" role="button" data-target="#"><span class="glyphicon glyphicon-search"</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form">
+                                        <li>
+                                            <a><input type="text" class="form-control" name="search"/></a>
+                                            <a><button type="submit" class="btn btn-success">Rechercher</button></a>
+                                        </li>
+                                    </form>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
 </div>
 
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+<!-- Modal Connection -->
+<div class="modal fade bs-example-modal-sm" id="modal_connection" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                <h4 class="modal-title">Log On</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_subscribe">S'inscrire</button>
+                <button type="button" class="btn btn-primary">Se connecter</button>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+</div>
+<!-- MODAL SUBSCRIBE -->
+<div class="modal fade" id="modal_subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                <h4 class="modal-title">S'inscrire</h4>
+            </div>
+            <form method="post" class="comment_form form_inline" action="/Users/user.class.php">
+            <div class="modal-body">
+                <div class="comment_table"></div>
+            </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Envoyer</button>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+</div>
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://www.sallykirkman.com/wp-content/uploads/2014/01/tennis-ball.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Maison Des Ligues Lorraines</h1>
+                    <p>La M2L est un établissement du Conseil Régional. La M2L héberge la majorité des ligues sportives régionales telles que la ligue de tennis.
+                        Nous louons nos salles sur une base de 5 euros le m2 et par mois avec une régularisation qui peut être demandée en fin d'année en cas de dépassement de la consommation éléctrique.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">A propos de nous</a></p>
+                </div>
+            </div>
         </div>
-        <footer>
-        <p>&copy; Maison des ligues de Lorraine 2015</p>
-    </footer>
+        <div class="item">
+            <img src="http://grimperensecurite.free.fr/image/escalade1.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Nos Ligues</h1>
+                    <p>Nous hébergeons plusieurs Ligues, celles ci peuvent profiter d'une demi journée gratuite par an d'occupation de l'amphitéâtre.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://praticiens-kinesport.com/praticiens/wp-content/uploads/2013/09/Fotolia_7060734_XL.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Nos Salles</h1>
+                    <p>Nous avons un total de 7 salles réservables même en soirée.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Nos Salles</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+
+    <!-- START THE FEATURETTES -->
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Nos Ligues</h2>
+            <p class="lead">Ici nos ligues peuvent poster leur nouveautés, vous pouvez donner votre avis ou même poster une annonce concernant nos ligues. Il vous suffit de vous inscrire pour cela.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="http://slideshow-studio.com/slideshow/files/2013/05/sports-slideshow-song.jpg" alt="Generic placeholder image">
+        </div>
     </div>
 
-    <hr>
+    <hr class="featurette-divider">
 
-    
-</div> <!-- /container -->
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="http://lorraine.ffrandonnee.fr/data/SitesComites/CR13/image/mrsl.jpg" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Nos Salles</span></h2>
+            <p class="lead">Vous voulez organiser une réunion, un rassemblement ou bien tout simplement une soirée pour que tout le monde apprenne à se connaître? Nos salles sont disponibles. Vérfiez les horraires, envoyer une demande pour une heure nous vous recontacterons.</p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">A propos de Nous</span></h2>
+            <p class="lead">La M2L est un établissement du Conseil Régional. La M2L héberge la majorité des ligues sportives régionales telles que la ligue de tennis. Nous louons nos salles sur une base de 5 euros le m2 et par mois avec une régularisation qui peut être demandée en fin d'année en cas de dépassement de la consommation éléctrique.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="https://lh5.googleusercontent.com/-0-yCgPwP5KU/UK5GHOPWzVI/AAAAAAAAAA4/xpuUsI4Z2j8/s0-d/logo470px.png" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+</div><!-- /.container -->
 
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./bootstrap/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="app-jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+</script>
 </body>
 </html>

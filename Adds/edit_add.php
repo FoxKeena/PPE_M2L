@@ -2,11 +2,11 @@
 $getid = $_POST['id'];
 $newTitle = $_POST['newTitle'];
 $newDetails = $_POST['newDetails'];
-include "connection_bdd.php";
+include "../connection_bdd.php";
 
 $update=$bdd->prepare("UPDATE adds
                         SET title=:newTitle,
-                        Details=:newDetails
+                        details=:newDetails
                         WHERE id = :getid");
 $update->bindParam(':newTitle',$newTitle);
 $update->bindParam(':newDetails',$newDetails);
@@ -24,7 +24,7 @@ $update->execute();
 <body>
 <form action="edit_add.php" method="post">
     <input type="text" id="newTitle" value="<?=$_POST['title']?>"/>
-    <input type="text" id="newDetails" value="<?=$_POST['Details']?>"/>
+    <input type="text" id="newDetails" value="<?=$_POST['details']?>"/>
     <button>Envoyer</button>
 </form>
 </body>
