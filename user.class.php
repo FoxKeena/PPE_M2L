@@ -46,7 +46,7 @@
 		{
 			try
 			{
-				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', 'bris4usa'); //On essaye de se connecter à la bdd
+				$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', ''); //On essaye de se connecter à la bdd
 			}
 			catch (Exception $e)
 			{
