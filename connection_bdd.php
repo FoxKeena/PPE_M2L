@@ -5,8 +5,6 @@
  * Date: 21/10/14
  * Time: 11:25
  */
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', '');
-} catch (Exeption $e) {
-    die('Erreur:' . $e->getMessage());
-}
+$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+$bdd = new PDO('mysql:host=localhost;dbname=maisondesligues', 'root', '',$pdo_options);
+$bdd -> exec("set names utf8");

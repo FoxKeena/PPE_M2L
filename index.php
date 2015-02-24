@@ -10,7 +10,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,144 +18,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>M2L</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="carousel.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
     <link href="dropdown.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->
 <body>
-<div class="navbar-wrapper">
-    <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">M2L</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="indexv2.php">Index</a></li>
-                            <li class="dropdown">
-                                <a id="ligues" data-toggle="dropdown" role="button" data-target="#">Ligues <span class="caret"></span></a>
-                                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                                    <li class="dropdown-submenu">
-                                        <a tabindex="-1" href="#">Sports</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="http://www.aikidoenlorraine.com">Aikido</a> </li>
-                                            <li><a href="">Athléthisme</a> </li>
-                                            <li><a href="">Aviron</a> </li>
-                                            <li><a href="">Badmington</a></li>
-                                            <li><a href="">Baseball</a></li>
-                                            <li><a href="">BasketBall</a></li>
-                                            <li><a href="">Bowling</a></li>
-                                            <li><a href="">Boxe Anglaise</a></li>
-                                            <li><a href="">Canoë Kayak</a></li>
-                                            <li><a href="">Danse</a></li>
-                                            <li><a href="">Echecs</a></li>
-                                            <li><a href="">Escalade</a></li>
-                                            <li><a href="">Escrime</a></li>
-                                            <li><a href="">Golf</a></li>
-                                            <li><a href="">Gymnastique</a></li>
-                                            <li><a href="">Handball</a></li>
-                                            <li><a href="">Judo</a></li>
-                                            <li><a href="">Karaté</a></li>
-                                            <li><a href="">Natation</a></li>
-                                            <li><a href="">Rugby</a></li>
-                                            <li><a href="#">Tennis</a></li>
-                                            <li><a href="#">VolleyBall</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a tabindex="-2" href="#">Salles</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">1</a> </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        <li><a href="#">Contact</a> </li>
-                    </ul>
-                    <div class="navbar-collapse navbar-right">
-                        <form class="navbar-form navbar-right" role="form">
-                           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_connection">Se connecter</button>
-                        </form>
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a id="recherche" data-toggle="dropdown" role="button" data-target="#"><span class="glyphicon glyphicon-search"</a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form">
-                                        <li>
-                                            <a><input type="text" class="form-control" name="search"/></a>
-                                            <a><button type="submit" class="btn btn-success">Rechercher</button></a>
-                                        </li>
-                                    </form>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </nav>
-
-    </div>
-</div>
-
-<!-- Modal Connection -->
-<div class="modal fade bs-example-modal-sm" id="modal_connection" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-                <h4 class="modal-title">Log On</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_subscribe">S'inscrire</button>
-                <button type="button" class="btn btn-primary">Se connecter</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- MODAL SUBSCRIBE -->
-<div class="modal fade" id="modal_subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-                <h4 class="modal-title">S'inscrire</h4>
-            </div>
-            <form method="post" class="comment_form form_inline" action="/Users/user.class.php">
-            <div class="modal-body">
-                <div class="comment_table"></div>
-            </div>
-            </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success">Envoyer</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+<?php include('navbar.html');?>
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -183,7 +60,6 @@
                 <div class="carousel-caption">
                     <h1>Nos Ligues</h1>
                     <p>Nous hébergeons plusieurs Ligues, celles ci peuvent profiter d'une demi journée gratuite par an d'occupation de l'amphitéâtre.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus</a></p>
                 </div>
             </div>
         </div>
@@ -272,7 +148,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-</script>
+<script src="js/function.js"></script>
 </body>
 </html>

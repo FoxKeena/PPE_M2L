@@ -2,17 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: Keena
- * Date: 10/02/15
- * Time: 14:46
+ * Date: 24/02/15
+ * Time: 03:20
  */
 
 include('connection_bdd.php');
 
-if(isset($_GET['sport'])){
-    $sport_bdd = $bdd->prepare("SELECT * FROM sports WHERE nom_ligue = :ligue");
-    $sport_bdd->bindParam(':ligue',$_GET['sport']);
-    $sport_bdd->execute();
-    $sport = $sport_bdd->fetchAll(PDO::FETCH_ASSOC);
+if(isset($_GET['annonce'])){
+    $add_bdd = $bdd->prepare("SELECT * FROM adds WHERE id = :id");
+    $add_bdd->bindParam(':ligue',$_GET['id']);
+    $add_bdd->execute();
+    $add_un = $add_bdd->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -37,22 +37,19 @@ if(isset($_GET['sport'])){
 ================================================== -->
 <body>
 <div class="site-wrapper">
-<?php include('navbar.html');?>
+    <?php include('navbar.html');?>
 
 
     <div class="site-wrapper-inner">
 
-            <div class="inner cover">
-                <h1 class="cover-heading"><?= $sport[0]['nom_ligue'];?></h1>
-                <p class="lead"><?= $sport[0]['description'];?></p>
-                <p class="lead">
-                    <a href="<?= $sport[0]['site'];?>" class="btn btn-lg btn-success">Site</a>
-                </p>
-            </div>
-
+        <div class="inner cover">
+            <h1 class="cover-heading"><?= $add_un[0]['title'];?></h1>
+            <p class="lead"><?= $add_un[0]['details'];?></p>
         </div>
 
     </div>
+
+</div>
 
 </div>
 
