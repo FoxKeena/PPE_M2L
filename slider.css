@@ -29,7 +29,7 @@
 .diapo{
 	float: left;
 	width: 900px;
-	height: 100px;
+	height: 4255px;
 	text-align: center;
 }
 
@@ -57,28 +57,6 @@
 	margin-left: 35%;
 }
 
-#connexion{
-	float: left;
-	width: 600px;
-}
-
-#bouttonrecherche{
-	float: right;
-	width: 10%;
-}
-
-#menuderoulant{
-	float: right;
-	max-width: 10%;
-}
-
-#search{
-	float: right;
-	width: 87px;
-}
-
-#connexion_search{
-	display: inline-block;
-	float: right;
-	width: 65%;
+#inscription{
+	margin-left: 60%;
 }
