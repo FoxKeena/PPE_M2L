@@ -8,7 +8,7 @@
 
 include('connection_bdd.php');
 
-if(isset($_GET['annonce'])){
+if(isset($_GET['id'])){
     $add_bdd = $bdd->prepare("SELECT * FROM adds WHERE id = :id");
     $add_bdd->bindParam(':ligue',$_GET['id']);
     $add_bdd->execute();
@@ -40,18 +40,24 @@ if(isset($_GET['annonce'])){
     <?php include('navbar.html');?>
 
 
-    <div class="site-wrapper-inner">
-
-        <div class="inner cover">
-            <h1 class="cover-heading"><?= $add_un[0]['title'];?></h1>
-            <p class="lead"><?= $add_un[0]['details'];?></p>
-        </div>
-
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Utilisateur</th>
+                <th>Annonce</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><?= $add_un['utlisateur'];?></td>
+                <td><?= $add_un['details'];?></td>
+            </tr>
+        </tbody>
+    </table>
 
 </div>
 
 </div>
-
+<?php var_dump($_GET);?>
 </body>
 </html>
