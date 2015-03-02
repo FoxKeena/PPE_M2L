@@ -44,7 +44,7 @@
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-			<img src="http://www.sallykirkman.com/wp-content/uploads/2014/01/tennis-ball.jpg" alt="First slide">
+			<img src="Images/tennis.jpg" alt="First slide">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Maison Des Ligues Lorraines</h1>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img src="http://grimperensecurite.free.fr/image/escalade1.jpg" alt="Second slide">
+			<img src="Images/NatationHeaderM2L.jpg" alt="Second slide">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Nos Ligues</h1>
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img src="http://praticiens-kinesport.com/praticiens/wp-content/uploads/2013/09/Fotolia_7060734_XL.jpg" alt="Third slide">
+			<img src="Images/NatationHeaderM2L.jpg" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>Nos Salles</h1>

@@ -8,12 +8,10 @@
 
 include('connection_bdd.php');
 
-if(isset($_GET['id'])){
-    $add_bdd = $bdd->prepare("SELECT * FROM adds WHERE id = :id");
-    $add_bdd->bindParam(':ligue',$_GET['id']);
+    $add_bdd = $bdd->prepare("SELECT * FROM adds WHERE id =:id");
+    $add_bdd->bindParam(':id',$_GET['id']);
     $add_bdd->execute();
     $add_un = $add_bdd->fetchAll(PDO::FETCH_ASSOC);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -36,11 +34,11 @@ if(isset($_GET['id'])){
 <!-- NAVBAR
 ================================================== -->
 <body>
-<div class="site-wrapper">
+
     <?php include('navbar.html');?>
 
-
-    <table>
+    <div class="container" style="padding-top: 15%;">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Utilisateur</th>
@@ -49,15 +47,11 @@ if(isset($_GET['id'])){
         </thead>
         <tbody>
             <tr>
-                <td><?= $add_un['utlisateur'];?></td>
-                <td><?= $add_un['details'];?></td>
+                <td ><?= $add_un[0]['user'];?></td>
+                <td><?= $add_un[0]['details'];?></td>
             </tr>
         </tbody>
     </table>
-
 </div>
-
-</div>
-<?php var_dump($_GET);?>
 </body>
 </html>
