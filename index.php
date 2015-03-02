@@ -5,7 +5,10 @@
  * Date: 28/01/15
  * Time: 14:39
  */
-
+include("connection_bdd.php");
+$get_add = $bdd->prepare("SELECT * FROM adds ORDER BY id DESC LIMIT 3");
+$get_add->execute();
+$add = $get_add->fetchAll();
 ?>
 
 
@@ -69,6 +72,19 @@
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container marketing">
+
+		<!-- Three columns of text below the carousel -->
+		<div class="row">
+			<?php
+			foreach($add as $header):
+			?>
+			<div class="col-lg-4">
+				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				<h2><?=$header['title']; ?></h2>
+				<p><?=$header['details']; ?></p>
+				<p><a class="btn btn-default" href="annonce_un.php?id=<?=$header['id'];?>" role="button">View details &raquo;</a></p>			</div>
+			<?php endforeach; ?>
+		</div><!-- /.row -->
 
 
 	<!-- START THE FEATURETTES -->
