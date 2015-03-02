@@ -23,7 +23,6 @@
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
-<<<<<<< HEAD
 		            <a class="navbar-brand" href="Docs/index.php">Maison des Ligues Lorraines</a>
 		            <form method="post" action="module_recherche.php" id="rechercher_envoyer" role="form" class="navbar-form navbar-left">
 		            	<div class="dropdown">
@@ -37,9 +36,7 @@
 						</ul>
 						</div>
 					</form>
-=======
 		            <a class="navbar-brand" href="index.php">Maison des Ligues Lorraines</a>
->>>>>>> f35ca2664109119a36d85c5b6fedf8142ac04422
 		        </div>
 					<!--<div class="navbar-form navbar-rigth">
 				    	<a href="adduser.php">S'inscrire</a>
