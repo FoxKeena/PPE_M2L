@@ -5214,7 +5214,7 @@ a.list-group-item-danger.active:focus {
   border-color: #428bca;
 }
 .panel-primary > .panel-heading {
-  color: #fff;
+  color: #eee;
   background-color: #428bca;
   border-color: #428bca;
 }
@@ -5223,7 +5223,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading .badge {
   color: #428bca;
-  background-color: #fff;
+  background-color: #eee;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #428bca;
@@ -5411,7 +5411,7 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #fff;
+  background-color: #eeeeee;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #999;
