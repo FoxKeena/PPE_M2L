@@ -86,7 +86,7 @@ include('navbar.html');?>
                     </select>
                     </div>
                 <div class="form-group">
-                        <textarea class="form-control" rows="3">Annonce</textarea>
+                        <textarea class="form-control" rows="3" placeholder="Annonce"></textarea>
                 </div>
                     </form>
             </div>

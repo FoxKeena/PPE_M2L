@@ -5,10 +5,32 @@ article{
 }
 
 #locaux{
-	margin-top: 7%;
+	margin-top: 1%;
 	background-color: white;
 	border: 1px;
 	border-color: 000;
 	border-style: solid;
 }
 
+body{
+	background-color: #eee;
+}
+
+#well{
+	background-color: white;
+	border: none;
+}
+
+#creation_annonce{
+	padding-left: auto;
+	padding-right: auto;
+	width: 100%;
+	background-color: white;
+}
+
+#annonces{
+	margin-top: 7%;
+	background-color: white;
+	border: 1px;
+	border-style: solid;
+}

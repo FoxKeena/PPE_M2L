@@ -24,8 +24,8 @@ include("navbar.html");
                 En savoir plus
                 </button>
                 <div class="collapse" id="collapseExample">
-                  <div class="well">
-                    <h3> Implantation des quatres batiments</h3>
+                  <div class="well" id="well">
+                    <h3>Implantation des quatres batiments</h3>
                         <img src="Images/locauxM2L.png" class="schema"/>
                         <h3>Implantation des locaux en rez-de-chaussée des quatre bâtiments</h3>
                         <img src="Images/locaux2M2L.png" class="schema"/><br/><br/>
