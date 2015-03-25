@@ -11,6 +11,16 @@ $get_add = $bdd->prepare("SELECT * FROM adds ORDER BY id DESC LIMIT 6");
 $get_add->execute();
 $add = $get_add->fetchAll();
 
+
+if(isset($_POST['title'])){
+        $post = $bdd->prepare("INSERT INTO adds (title, details,sport) VALUES (:setTitle, :setDetails, :setSport) "); //Insérer en base de données depuis les input
+        $post->bindParam(':setTitle', $_POST['title']);// On définit le premier ?
+        $post->bindParam(':setDetails', $_POST['details']);// On définit le deuxième ?
+        $post->bindParam(':setSport',$_POST['sport']);
+        $add = $post->execute();// On execute la requête
+        //$id=$bdd->lastInsertId();
+}
+
 include('navbar.html');?>
 <div class="container">
 
@@ -45,14 +55,16 @@ include('navbar.html');?>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
                 <h4 class="modal-title">Nouvelle Annonce</h4>
             </div>
+            <form method="post">
+
             <div class="modal-body">
-                <form method="post">
+
                 <div class="form-group">
 
-                        <input type="text" placeholder="Titre" class="form-control">
+                        <input type="text" id="title" placeholder="Titre" class="form-control" name="title">
                 </div>
                 <div class="form-group">
-                    <select class="form-control">
+                    <select id="sport" class="form-control" name="sport">
                         <optgroup label="Sports de Combat">
                             <option>Aikido</option>
                             <option>Boxe Anglaise</option>
@@ -86,13 +98,13 @@ include('navbar.html');?>
                     </select>
                     </div>
                 <div class="form-group">
-                        <textarea class="form-control" rows="3" placeholder="Annonce"></textarea>
+                        <textarea id="details" class="form-control" rows="3" placeholder="Annonce" name="details"></textarea>
                 </div>
-                    </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Envoyer</button>
+                <input type="submit" class="btn btn-primary" value="Envoyer"/>
             </div>
+            </form>
         </div>
     </div>
 </div>
