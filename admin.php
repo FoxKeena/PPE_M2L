@@ -6,6 +6,7 @@
  * Time: 11:42
  */
 include("connection_bdd.php");
+include("navbar_admin.html");
 
 
 $limit= 5;
@@ -31,58 +32,7 @@ if(isset($_POST['sur'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>ADMIN</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <link href="carousel.css" rel="stylesheet">
-    <link href="search.css" rel="stylesheet">
-    <link href="dropdown.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
-<!-- NAVBAR
-================================================== -->
-<body style="padding:50px 0 0 0">
-<div class="container">
-
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">ADMIN</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="admin_recrutement.php">Recrutement</a>
-                    </li>
-                    <li>
-                        <a href="admin_adds.php">Annonces</a>
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-
-    </nav>
-
-</div>
 <form method="post">
 <select class="form-control" name="limit">
     <option value="5">5</option>
@@ -92,47 +42,54 @@ if(isset($_POST['sur'])){
 </select>
     <input type="submit" class="btn btn-primary"/>
     </form>
-<div>
-    <h2>Dernières Annonces</h2>
-    <?php
-        foreach($add as $print_add){
+<div class="container">
+    <div class="panel panel-default" id="locaux">
+            <h2>Dernières Annonces</h2>
+            <?php
+            foreach($add as $print_add){
             ?>
-            <div class="container">
-                <div class="panel-header">
-                <h4><?=$print_add['title'];?></h4>
-                    <?=$print_add['sport'];?>
+            <div class="panel panel-default" id="panel">
+                <div class="panel-heading">
+                    <h4><?=$print_add['titre'];?></h4>
+                    <i><?=$print_add['sport'];?></i>
+                    <span id="delete_add" class="glyphicon glyphicon-remove"></span>
                  </div>
                 <div class="panel-body">
                     <?=$print_add['details'];?>
                 </div>
-                <div class="panel-footer">
-                    <span id="delete_add" class="glyphicon glyphicon-remove"></span>
-                </div>
             </div>
-    <?php
-        }
-    ?>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 </div>
-<div>
-    <h2>Recrutement</h2>
+
+    
+    
+<div class="container">
+    <div class="panel panel-default" id="locaux">
+            <h2>Recrutement</h2>
         <?php
         foreach($job as $print_job){
             ?>
-            <div class="container">
-                <div class="panel-header">
+            <div class="panel panel-default" id="panel">
+                <div class="panel-heading">
                     <h4><?=$print_job['title'];?></h4>
                     <i><?=$print_job['requirement'];?></i>
+                    <span id="delete_job" class="glyphicon glyphicon-remove"></span>
                 </div>
                 <div class="panel-body">
                     <?=$print_job['description'];?>
-                    </div>
-                <div class="panel-footer">
-                    <span id="delete_job" class="glyphicon glyphicon-remove"></span>
-                    </div>
                 </div>
-        <?php
-        }
-        ?>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+</div>
+        
 
 </div>
 <script src="text/javascript">
