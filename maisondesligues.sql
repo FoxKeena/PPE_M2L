@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Lun 02 Mars 2015 à 17:29
--- Version du serveur :  5.6.21
--- Version de PHP :  5.6.3
+-- Client :  127.0.0.1
+-- Généré le :  Mer 25 Mars 2015 à 07:35
+-- Version du serveur :  5.6.20
+-- Version de PHP :  5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `maisondesligues`
+-- Base de données :  `maison_des_ligues`
 --
 
 -- --------------------------------------------------------
@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `adds` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `user` varchar(30) DEFAULT NULL,
   `title` text NOT NULL,
   `details` text NOT NULL,
   `id_user` int(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `adds`
@@ -56,16 +56,36 @@ INSERT INTO `adds` (`id`, `user`, `title`, `details`, `id_user`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `jobs`
+--
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+`id` int(30) NOT NULL,
+  `title` varchar(30) NOT NULL,
+  `description` text NOT NULL,
+  `requirement` text NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `title`, `description`, `requirement`) VALUES
+(1, 'Test', 'Coding Night', 'Aucun');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `sports`
 --
 
 CREATE TABLE IF NOT EXISTS `sports` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nom_ligue` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `nb_membre` int(11) NOT NULL,
   `site` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `sports`
@@ -91,17 +111,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(50) NOT NULL,
   `tel` varchar(10) NOT NULL,
   `pwd` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `ddn`, `email`, `tel`, `pwd`) VALUES
-(1, 'Depardieu', 'Paul', '0000-00-00', 'paul.depardieu@y-nov.com', '787915490', ''),
-(2, 'Sebrie', 'Mickael', '1991-03-24', 'mickael.sebrie@y-nov.com', '684888228', ''),
-(5, 'Depardieu', 'Paul', '1991-03-24', 'paul.depardieu@y-nov.com', '0', ''),
-(6, 'Barental', 'Meryl', '1994-12-21', 'meryl.barental@y-nov.com', '669696969', ''),
 (7, 'Depardieu', 'Paul', '1995-04-25', 'paul.depardieu@y-nov.com', '787915490', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
 (8, 'axel', 'thiry', '1995-05-05', 'axel.thiry@y-nov.com', '0777777777', '9cf95dacd226dcf43da376cdb6cbba7035218921'),
 (9, 'Leux', 'Thomas', '1994-01-23', 'leux.thomas@y-nov.com', '0666666666', '2d64170babb41df5663852d9a96a639d29076c92'),
@@ -114,15 +130,9 @@ INSERT INTO `users` (`id`, `nom`, `prenom`, `ddn`, `email`, `tel`, `pwd`) VALUES
 --
 
 --
--- Index pour la table `adds`
+-- Index pour la table `jobs`
 --
-ALTER TABLE `adds`
- ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `sports`
---
-ALTER TABLE `sports`
+ALTER TABLE `jobs`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -136,15 +146,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT pour la table `adds`
+-- AUTO_INCREMENT pour la table `jobs`
 --
-ALTER TABLE `adds`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT pour la table `sports`
---
-ALTER TABLE `sports`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+ALTER TABLE `jobs`
+MODIFY `id` int(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
