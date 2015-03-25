@@ -40,7 +40,8 @@ include("navbar.html");
 
                         En fonction de leur importance, les ligues et comités départementaux occupent un ou plusieurs bureaux. Ceux-ci peuvent communiquer entre eux quand ils sont contigus. Chaque bureau dispose d'un espace de rangement. Les employés et les bénévoles des ligues et CD disposent en bout d'étage d'une salle de réunion libre, laquelle est accessible seulement en journée et sans réservation (« premier arrivé, premier servi »). La location se fait sur la base d'un forfait de charges locatives par bureau (5€ par m2 et par mois).<br/><br/>
                         <h3>Plan standard d'étage : l'exemple du deuxième étage du bâtiment A</h3>
-                        <img src="Images/locaux3M2L.png" class="schema"/>
+                        <img src="Images/locaux3M2L.png" class="schema"/><br/><br/>
+                        <h3>Vous souhaitez reserver une sale ? Cliquez <a href="reservation_salle.php">ici</a></h3>
                     </div>
                 </div>
             </div>
