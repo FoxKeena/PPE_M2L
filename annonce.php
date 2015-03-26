@@ -23,31 +23,45 @@ if(isset($_POST['title'])){
 
 include('navbar.html');?>
 <div class="container">
-
     <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default" id="locaux">
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
-            <div class="jumbotron">
-                <h1>Créer son annonce</h1>
-                <p>Vous aussi vous pouvez créer votre propre annonce!</p>
-                <p> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add">Cliquez Ici!</button></p>
+            <div class="panel-heading">
+                <h3>Voici les dernières annonces</h3>
             </div>
-            <div class="row">
+            
+
+
+            <div class="panel-body">
                 <?php foreach($add as $new_add): ?>
                 <div class="col-xs-6 col-lg-4">
-                    <h2><?=$new_add['title']; ?></h2>
-                    <p><?=$new_add['details']; ?>
-                <p><a class="btn btn-default" href="annonce_un.php?id=<?=$new_add['id'];?>" role="button">View details &raquo;</a></p>
+                    <h2><?=$new_add['titre']; ?></h2>
+                    <p><?=$new_add['details']; ?></p>
+                <p><a class="btn btn-primary" href="annonce_un.php?id=<?=$new_add['id'];?>" role="button">Voir les détails &raquo;</a></p>
                 </div>
                 <?php endforeach ?>
             </div><!--/row-->
         </div>
-        </div>
+        
     </div>
 <!-- Modal Nouvel Add -->
+
+            <div class="panel panel-default" id="locaux">
+                <div class="panel-heading">
+                    <h1>Créer son annonce</h1>
+                </div>
+                <div class="panel-body">
+                    <p>Vous aussi vous pouvez créer votre propre annonce!</p>
+                    <p> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add">Cliquez Ici!</button></p>
+                </div>
+            </div>
+
+
+
+
+
 <div class="modal fade bs-example-modal-sm" id="modal_add" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

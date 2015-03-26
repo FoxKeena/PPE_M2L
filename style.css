@@ -34,3 +34,13 @@ body{
 	border: 1px;
 	border-style: solid;
 }
+
+#panel{
+	margin-top: 1%;
+	background-color: white;
+	border: 1px;
+	border-color: 000;
+	border-style: solid;
+	margin-left: 1%;
+	margin-right: 1%;
+}

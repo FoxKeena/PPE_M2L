@@ -80,7 +80,7 @@ $add = $get_add->fetchAll();
 			?>
 			<div class="col-lg-4">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-				<h2><?=$header['title']; ?></h2>
+				<h2><?=$header['titre']; ?></h2>
 				<p><?=$header['details']; ?></p>
 				<p><a class="btn btn-default" href="annonce_un.php?id=<?=$header['id'];?>" role="button">View details &raquo;</a></p>			</div>
 			<?php endforeach; ?>

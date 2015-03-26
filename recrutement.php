@@ -13,11 +13,6 @@
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
-            <div class="jumbotron" id="creation_annonce">
-                <h1>Créer son annonce</h1>
-                <p>Vous aussi vous pouvez créer votre propre annonce!</p>
-                <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add">Cliquez Ici!</button></p>
-            </div>
             <div class="row">
                 <?php foreach($job as $new_job): ?>
                 <div class="col-xs-6 col-lg-4">
