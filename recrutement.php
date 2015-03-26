@@ -25,7 +25,7 @@
         </div>
     </div>
             </div>
-        <!-- Modal Nouvel Add -->
+        <!-- Modal Nouveau Job -->
         <div class="modal fade bs-example-modal-sm" id="modal_add" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
