@@ -33,7 +33,11 @@
 			    </div>
 	        </div>
 	    <?php
-	        }
+	    }
+	        if (empty($print_add['titre']) && empty($print_add['details'])) { ?>
+	        	<h4>Désolé, aucune annonce ne correspond à votre recherche</h4>
+	    <?php
+	    }
 	    ?>
 	</div>
 	<div>
@@ -52,6 +56,11 @@
                 
 	        <?php
 	        }
+	        if (empty($print_sport['nom_ligue']) && empty($print_sport['descriptions'])) {
+	        ?>
+	        	<h4>Désolé, aucun sport ne correspond à votre recherche</h4>
+	        <?php	
+	        }
 	        ?>
 
 	</div>
@@ -68,11 +77,16 @@
                 	<?=$print_job['description'];?>
                 </div>
             </div>
-                
+        </div>        
         <?php
         }
-        ?>
+			if (empty($print_job['title']) && empty($print_job['requirement']) && empty($print_job['description'])) {
+			?>
+				<h4>Desolé, aucunne annonce de recrutement ne correspond à votre recherche</h4>
+			<?php
+			}
+        	?>
 
-		</div>
+		
 	</div>
 

@@ -128,12 +128,12 @@ if(isset($_POST['id_job'])) {
                     <?=$print_job['description'];?>
                 </div>
                 <div class="panel-footer">
-                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_job">
+                    <form method="post">
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_job" value="<?=$print_job['id'];?>">
                             <span class="icon">
                                 <i class="glyphicon glyphicon-pencil"></i>
                             </span>
-                        </button>
-                    <form method="post">
+                        </button>                    
                     <button type="submit" name="delete_job" class="btn btn-danger btn-sm" value="<?=$print_job['id'];?>">
                         <span class="icon">
                             <i class="glyphicon glyphicon-remove"></i>

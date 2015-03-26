@@ -1,7 +1,24 @@
 <?php
-	include("navbar.html");
+	include("navbar_admin.html");
 	include ('connection_bdd.php');
 
+
+	if(isset($_POST['id_add'])){
+    $getid = $_POST['id_add'];
+    $newTitle = $_POST['newTitle'];
+    $newDetails = $_POST['newDetails'];
+    $newSport = $_POST['newSport'];
+    $update_job=$bdd->prepare("INSERT INTO adds
+                        SET titre=:newTitle,
+                        details=:newDetails,
+                        sport=:newSport
+                        WHERE id = :getid");
+    $update_job->bindParam(':newTitle',$newTitle);
+    $update_job->bindParam(':newDetails',$newDetails);
+    $update_job->bindParam(':newSport',$newSport);
+    $update_job->bindParam(':getid',$getid);
+    $update_job->execute();
+}
 ?>
 <div class="container">
 	<div class="panel panel-default">
@@ -27,11 +44,42 @@
 						<input type="text" placeholder="Titre" class="form-control">
 	                </div>
 	                <div class="form-group">
-	                    <textarea class="form-control" rows="3" placeholder="Description de l'offre"></textarea>
+	                    <textarea class="form-control" rows="3" placeholder="Details"></textarea>
 	                </div>
-	                <div class="form-group">
-	                    <textarea class="form-control" rows="3" placeholder="Prerequis"></textarea>
-	                </div>
+	                <<div class="form-group">
+                        <select id="newSport" class="form-control" name="sport">
+                            <optgroup label="Sports de Combat">
+                                <option>Aikido</option>
+                                <option>Boxe Anglaise</option>
+                                <option>Escrime</option>
+                                <option>Judo</option>
+                                <option>Karaté</option>
+                            </optgroup>
+                            <optgroup label="Sports Aquatiques">
+                                <option>Natation</option>
+                                <option>Canoë Kayak</option>
+                                <option>Aviron</option>
+                            </optgroup>
+                            <optgroup label="Sports de Balles">
+                                <option>Rugby</option>
+                                <option>Tennis</option>
+                                <option>VolleyBall</option>
+                                <option>Handball</option>
+                                <option>Bowling</option>
+                                <option>Badmington</option>
+                                <option>Baseball</option>
+                                <option>BasketBall</option>
+                                <option>Golf</option>
+                            </optgroup>
+                            <optgroup label="Sports de Coordination">
+                                <option>Gymnastique</option>
+                                <option>Echecs</option>
+                                <option>Danse</option>
+                                <option>Athléthisme</option>
+                                <option>Escalade</option>
+                            </optgroup>
+                        </select>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">

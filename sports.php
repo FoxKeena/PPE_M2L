@@ -22,7 +22,7 @@ if(isset($_GET['sport'])){
     		<h1 class="cover-heading"><?= $sport[0]['nom_ligue'];?></h1>
     	</div>
     	<div class="panel-body">
-    		<p class="lead"><?= $sport[0]['description'];?></p>
+    		<p class="lead"><?= $sport[0]['descriptions'];?></p>
     		<p class="lead"></p>
         	<a href="<?= $sport[0]['site'];?>" class="btn btn-primary">Site &raquo;</a>
         </div>
