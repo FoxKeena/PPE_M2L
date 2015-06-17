@@ -9,9 +9,9 @@ include("connection_bdd.php");
 $get_add = $bdd->prepare("SELECT * FROM adds ORDER BY id DESC LIMIT 3");
 $get_add->execute();
 $add = $get_add->fetchAll();
+
+
 ?>
-
-
 
 
 <?php include('navbar.html');?>
@@ -78,7 +78,7 @@ $add = $get_add->fetchAll();
 			<?php
 			foreach($add as $header):
 			?>
-			<div class="col-lg-4">
+			<div class="col-md-4" style="padding-left: 10%">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 				<h2><?=$header['titre']; ?></h2>
 				<p><?=$header['details']; ?></p>
@@ -131,11 +131,33 @@ $add = $get_add->fetchAll();
 	<!-- FOOTER -->
 	<footer>
 		<p class="pull-right"><a href="#">Back to top</a></p>
-		<p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="admin.php">Admin</a> </p>
+		<p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="log.php">Admin</a></p>
 	</footer>
 
 </div><!-- /.container -->
-
+<!--<div class="modal fade bs-example-modal-sm" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                <h4 class="modal-title">Admin</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-group">
+                        <input type="text" placeholder="Identifiant" name="identifiant" id="identifiant" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Mot de passe" name="password" id="password" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Connexion</button>
+            </div>
+        </div>
+    </div>
+</div>-->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
